@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .nav{
+      height: 60px;
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 50px;
+
+    }
+    .nav h3{
+      flex: 1;
+    }
+    .links{
+      display: flex;
+      list-style: none;
+      gap: 50px;
+      
+
+    }
+    .menu-toggle ion-icon{
+      font-size: 45px;
+    }
+    .menu-toggle{
+      display: none;
+    }
+    @media(max-width:500px){
+      .links{
+        display: none;
+      }
+      .menu-toggle{
+        display: block;
+      }
+      .menu-toggle:focus + .links{
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <h3>logo</h3>
+    <ul class="links">
+      <li>Home</li>
+      <li>Office</li>
+      <li>Services</li>
+      <li>Links</li>
+    </ul>
+    <div class="menu-toggle">
+      <ion-icon name="menu-outline"></ion-icon>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

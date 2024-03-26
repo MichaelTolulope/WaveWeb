@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        .container{
+            width: 90%;
+            height: 70vh;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        }
+        .search-container{
+            border-radius: 30px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            width: 95%;
+            height: fit-content;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .input{
+            outline: none;
+            font-size: larger;
+            min-width: 80%;
+
+        }
+        .search-btn{
+            display: flex;
+            border-radius: 50%;
+            border: none;
+            background-color: rgb(202, 49, 49);
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            padding: 10px;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+        .search-btn:hover{
+            background-color: black;
+            transform: scale(1.1);
+        }
+        .search-btn:active{
+            transform: scale(0.8);
+        }
+        @media(max-width:410px) {
+            .input{
+                font-size: 16px;
+                width: 50%;
+            }
+            .search-container{
+                padding: 0 30px;
+            }
+            .container{
+                width: 70%;
+            }
+        }
+        @media screen and (min-width:700px) {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="search-container">
+            <input class="input" type="text" placeholder="search for someting online ...">
+            <button class="btn-primary search-btn" onclick="somethingElse()"><ion-icon name="search"></ion-icon></button>
+            
+
+    </form>
+    </div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    const inputData = document.querySelector(".input");
+    function somethingElse(){
+        alert(inputData.value);
+    }
+</script>
+</body>
+</html>
